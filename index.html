@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>zzz</title>
+    <script src="nosleep.js"></script>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vw;
+            background-color: #007acc
+        }
+    </style>
+</head>
+<body id="main">
+    <script>
+        var noSleep = new NoSleep();
+        var toggle = false;
+        var main = document.getElementById("main");
+        main.addEventListener('click', function () {
+            if(!toggle) {
+                noSleep.enable();
+                toggle = true;
+                main.style.backgroundColor = "#003d66"
+                console.log("enabled");
+            }
+            else {
+                noSleep.disable();
+                toggle = false;
+                main.style.backgroundColor = "#007acc"
+                console.log("disabled");
+            }
+            
+        }, false);
+    </script>
+</body>
+</html>
